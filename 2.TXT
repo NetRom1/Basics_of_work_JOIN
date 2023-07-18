@@ -1,0 +1,10 @@
+create table nrv.orders(
+
+   id               int auto_increment not null  primary key ,
+   date             datetime not null,
+   customer_id      int not null,
+   product_name     varchar(255) not null,
+   amount           int not null,
+   FOREIGN KEY (customer_id) REFERENCES customers(id)
+
+);
